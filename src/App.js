@@ -12,13 +12,13 @@ class App extends Component {
 
 
     componentDidMount(){
-        axios.get(`${port.server_port}/tasks`).then(({data,status})=>{if(status === 200){this.props.loadTasksFunc(data)}});
+        axios.get(`/tasks`).then(({data,status})=>{if(status === 200){this.props.loadTasksFunc(data)}});
     }
 
     addInput = (event) => {
         event.preventDefault();
         let newInput = this.props.input;
-        axios.post(`${port.server_port}/tasks`,{task: newInput})
+        axios.post(`/tasks`,{task: newInput})
             .then(({data, status}) => {
                 if (status === 201) {
                     this.props.addInputFunc(data);
