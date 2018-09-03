@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import port from '../../../config/config'
+import port from '../../node/config/config'
 import {input} from '../../actions/inputUpdateAction';
 import {deleteTask,editTask, isActive} from '../../actions/tasksAction';
 import {read, change} from '../../actions/editFieldAction';
