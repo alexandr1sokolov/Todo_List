@@ -23,5 +23,5 @@
     "eject": "react-scripts eject",
     "dev": "react-scripts start && node server.js"
   },
-  "proxy": "http://localhost:25555"
+  "proxy": "http://localhost:15555"
 }

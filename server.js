@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 const todoRoutes = require('./src/node/routes/todoRoutes');
 const config = require('./src/node/config/config');
 const DB = config.db_url;
-const server_port = config.server_port;
+const server_port = config.PORT;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));

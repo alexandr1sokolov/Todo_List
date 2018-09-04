@@ -12,7 +12,7 @@ export default function inputsArr (state = [], action) {
             console.log('input:',task);
             return state.map(el => el._id === id ? {...el, task} : el);
         case "IS_ACTIVE":
-            return state.map(el => (el._id === action.id) ? {...el, isActive: !el.isActive} : el);
+            return state.map(el => (el._id === action.id) ? {...el, isActive: !el.isActive} :  {...el, isActive: false});
 
         default:
             return state
