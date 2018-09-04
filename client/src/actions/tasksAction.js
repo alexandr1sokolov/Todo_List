@@ -20,7 +20,7 @@ export const editTask = (id,input) => (
     {
         type: "EDIT_TASK",
         id: id,
-        input: input,
+        task: input,
     });
 
 export const isActive = (num) => ({type: "IS_ACTIVE", id:num,});

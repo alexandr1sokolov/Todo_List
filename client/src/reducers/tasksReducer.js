@@ -7,9 +7,8 @@ export default function inputsArr (state = [], action) {
         case "DELETE_TASK":
             return state.filter(el => el._id !== action.id);
         case "EDIT_TASK":
-            const task = action.input;
-            const id = action.id;
-            return state.map(el => el._id === id ? {...el, task} : el);
+            const task = action.task;
+            return state.map(el => el._id === action.id ? {...el, task} : el);
         case "IS_ACTIVE":
             return state.map(el => (el._id === action.id) ? {...el, isActive: !el.isActive} :  {...el, isActive: false});
 
