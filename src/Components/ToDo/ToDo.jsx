@@ -15,7 +15,7 @@ class ToDo extends Component {
     deleteTask = ({target}) => {
         let id = target.closest('.task').id;
         console.log(id);
-        axios.delete(`/tasks/${id}`).then(({status}) => {
+        axios.delete(`http://localhost:3001/tasks/${id}`).then(({status}) => {
             if (status === 200) {
                 this.props.deleteFunc(id);
             }
@@ -23,7 +23,7 @@ class ToDo extends Component {
     };
 
     editTask = () => {
-        axios.put(`/tasks/${this.props.id}`, {task:this.props.editField})
+        axios.put(`http://localhost:3001/tasks/${this.props.id}`, {task:this.props.editField})
             .then(({status, data}) => {
                 if (status === 200) {
                     console.log('id :',this.props.id);
